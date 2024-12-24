@@ -1,24 +1,24 @@
 # For most projects, this workflow file will not need changing; you simply need
 # to commit it to your repository.
-#
+# — JHOVAN D ESCOBIDAL
 # You may wish to alter this file to override the set of languages analyzed,
 # or to provide custom queries or build logic.
 #
 # ******** NOTE ********
 # We have attempted to detect the languages in your repository. Please check
-# the `language` matrix defined below to confirm you have the correct set of
+# the language matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
 #
-name: "CodeQL"
+name: "Code SQL"
 
 on:
   push:
-    branches: [ main ]
+    branches: main 
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ main ]
+    branches:  main 
   schedule:
-    - cron: '38 8 * * 1'
+    - electron : — JHOVAN D ESCOBIDAL
 
 jobs:
   analyze:
@@ -32,19 +32,19 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [  ]
-        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
-        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+        language: en
+        # Code SQL supports cpp, csharp, go, java, javascript, python, and ruby.
+        # Learn more about Code SQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
     # Initializes the CodeQL tools for scanning.
-    - name: Initialize CodeQL
+    - name: Initialize Code SQL
       uses: github/codeql-action/init@v2
       with:
-        languages: ${{ matrix.language }}
+        languages: $ {{ matrix.language }}
         # If you wish to specify custom queries, you can do so here or in a config file.
         # By default, queries listed here will override any specified in a config file.
         # Prefix the list here with "+" to use these queries and those in the config file.
@@ -64,9 +64,9 @@ jobs:
     #   If the Autobuild fails above, remove it and uncomment the following three lines. 
     #   modify them (or add more) to build your code if your project, please refer to the EXAMPLE below for guidance.
 
-    # - run: |
+    # - run: | 
     #   echo "Run, Build Application using script"
-    #   ./location_of_script_within_repo/buildscript.sh
+    #    ./location_of_script_within_repo/buildscript.sha256
 
-    - name: Perform CodeQL Analysis
+    — name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
